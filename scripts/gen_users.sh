@@ -25,12 +25,21 @@ fi
 
 . vars > /dev/null
 
+export KEY_EMAIL="$(tr -cd '[:alnum:]' < /dev/urandom | fold -w30 | head -n1)@sm.net"
+
 ./build-key --batch "$client"
 
-(cd keys && tar cfJ ../"$client".tar.xz ca.crt "$client".{key,crt})
+if [ -f 'foobar.conf' ]; then
+    cp 'foobar.conf' "${client}.conf"
+    sed -i s/foorbar/"$client"/g "${client}.conf"
+fi
 
-if [ ! id "$owner" ]; then
-    useradd -m -k "$owner"
+(tar cfJ "$client".tar.xz keys/ca.crt "keys/$client".{key,crt} "${client}.conf")
+
+rm "${client}.conf"
+
+if ! id "$owner"; then
+    useradd -m "$owner"
 fi
 
 mv "$client".tar.xz /home/"$owner"/
