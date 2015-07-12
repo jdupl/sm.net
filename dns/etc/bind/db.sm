@@ -1,0 +1,21 @@
+;
+; BIND data file for TLD ".sm"
+;
+$TTL	604800
+@	IN	SOA	sm. root.sm. (
+		2		; Serial
+		604800	; Refresh
+		86400	; Retry
+		2419200	; Expire
+		604800 ); Negative Cache TTL
+;
+@           IN  NS	dns.sm.
+@           IN  A	10.2.0.1
+dns	        IN	A	10.2.0.1
+alcazar	    IN	A	10.2.0.10
+airborne    IN	A	10.2.0.11
+debbie      IN	A	10.2.0.12
+kikazaru    IN	A	10.2.0.13
+judgement   IN	A	10.2.0.14
+sun	        IN	A	10.2.0.15
+wiki        IN	A	10.2.0.3
