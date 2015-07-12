@@ -12,6 +12,8 @@ $TTL	604800
 @           IN  NS	dns.sm.
 @           IN  A	10.2.0.1
 dns	        IN	A	10.2.0.1
+vpn	        IN	A	10.2.0.1
+info        IN	A	10.2.0.1
 alcazar	    IN	A	10.2.0.10
 airborne    IN	A	10.2.0.11
 debbie      IN	A	10.2.0.12
