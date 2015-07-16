@@ -9,19 +9,27 @@ $TTL    604800
             2419200   ; Expire
             604800)   ; Negative Cache TTL
 ;
+; core servers
 @           IN        NS       dns.sm.
 @           IN        A        10.2.0.1
 dns         IN        A        10.2.0.1
-vpn         IN        A        10.2.0.1
-info        IN        A        10.2.0.1
 ;
+; websites
+vpn         IN        A        10.2.0.1
 wiki        IN        A        10.2.0.3
 paste       IN        A        10.2.0.3
 ;
+; community servers
 alcazar     IN        A        10.2.0.10
-airborne    IN        A        10.2.0.11
-orga        IN        CNAME    airborne.sm.
+orgasmes    IN        A        10.2.0.11
 debbie      IN        A        10.2.0.12
 kikazaru    IN        A        10.2.0.13
 judgement   IN        A        10.2.0.14
 sun         IN        A        10.2.0.15
+;
+; cnames
+orga        IN        CNAME    orgasmes.sm.
+faci        IN        CNAME    debbie.sm.
+capitali    IN        CNAME    judgement.sm.
+raci        IN        CNAME    alcazar.sm.
+info        IN        CNAME    vpn.sm.
