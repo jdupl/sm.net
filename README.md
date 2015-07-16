@@ -6,7 +6,7 @@ OpenVPN configurations for sm.net
 * Acquire keys
 
 * Move content of provided tar.xz to /etc/openvpn
-* 
+
 * Make sure your openvpn config reflects files on your disk
 
 * Add vpn domain
@@ -21,7 +21,8 @@ OpenVPN configurations for sm.net
 
 To avoid having 10.2.0.1 as your main DNS, it is recommended to use Unbound.
 
-The example below will forward all DNS requests to `8.8.8.8` except for `sm`. All domains ending with `sm` will use our custom DNS server.
+The example below will forward all DNS requests to `8.8.8.8` except for `sm`.
+All domains ending with `sm` will use the VPN's DNS server.
 
 ```
 server:
@@ -37,5 +38,3 @@ server:
     name: "sm."
     forward-addr: 10.2.0.1@53
 ```
-
-
