@@ -26,6 +26,7 @@ debbie      IN        A        10.2.0.12
 kikazaru    IN        A        10.2.0.13
 judgement   IN        A        10.2.0.14
 sun         IN        A        10.2.0.15
+world       IN        A        10.2.0.16
 ;
 ; cnames
 orga        IN        CNAME    orgasmes.sm.
