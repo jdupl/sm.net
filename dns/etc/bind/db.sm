@@ -18,6 +18,7 @@ dns         IN        A        10.2.0.1
 vpn         IN        A        10.2.0.1
 wiki        IN        A        10.2.0.3
 paste       IN        A        10.2.0.3
+git         IN        A        10.2.0.4
 ;
 ; community servers
 alcazar     IN        A        10.2.0.10
