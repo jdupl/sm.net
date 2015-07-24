@@ -38,3 +38,9 @@ server:
     name: "sm."
     forward-addr: 10.2.0.1@53
 ```
+
+### Support
+The configurations are tested on Debian
+
+### Other Linux Distributions
+Before starting the openvpn service, make sure you have the linux group nogroup added to your system(e.g. Arch Linux, Fedora, etc...). If your don't want the nogroup added to your system, another option is to simply change the group in your configuration file to match your current system(e.g. nobody instead of nogroup).
