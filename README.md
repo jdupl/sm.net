@@ -44,10 +44,12 @@ server:
 
 #### Automatic reconnecting
 
-Removing the lines ```
+Removing the lines 
+```
 user nobody
 group nogroup
-``` is necessary for openvpn to be able to reconnect to the server automatically.
+``` 
+is necessary for openvpn to be able to reconnect to the server automatically.
 
 
 ### Support
