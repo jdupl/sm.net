@@ -26,13 +26,6 @@ To avoid having 10.2.0.1 as your main DNS, it is recommended to use Unbound.
 The example below will forward all DNS requests to `8.8.8.8` except for `sm`.
 All domains ending with `sm` will use the VPN's DNS server.
 
-#### Automatic reconnecting
-
-Removing the lines ```
-user nobody
-group nogroup
-``` is necessary for openvpn to be able to reconnect to the server automatically.
-
 ```
 server:
   use-syslog: yes
@@ -47,6 +40,15 @@ server:
     name: "sm."
     forward-addr: 10.2.0.1@53
 ```
+
+
+#### Automatic reconnecting
+
+Removing the lines ```
+user nobody
+group nogroup
+``` is necessary for openvpn to be able to reconnect to the server automatically.
+
 
 ### Support
 The configurations are tested on Debian
